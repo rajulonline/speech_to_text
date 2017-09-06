@@ -1,0 +1,10 @@
+{
+  "config": {
+      "encoding":"FLAC",  
+      "sampleRateHertz": 44100,  
+      "language_code": "it-IT"
+  },
+  "audio": {
+      "uri":"gs://speechtotextapi/mono.flac"
+  }
+}
