@@ -34,7 +34,7 @@ curl -s -X POST -H "Content-Type: application/json" --data-binary @request.json 
 "https://speech.googleapis.com/v1/speech:longrunningrecognize?key=${API_KEY}"
 </li>
 <li>
-https://speech.googleapis.com/v1/operations/OPERATION_NAME?key=${API_KEY}
+https://speech.googleapis.com/v1/operations/OPERATION_NAME?key=${API_KEY} \
 | jq -r '.response.results[].alternatives[].transcript' > output.txt
 </li>
 </ul>
