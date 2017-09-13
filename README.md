@@ -25,13 +25,12 @@ ffmpeg -i location_of_your_file/audio_file.flac -ac 1 mono.flac</li>
       "language_code": "en-US"
   },
   "audio": {
-      "uri":"gs://speechtotextapi/mono.flac"
+      "uri":"gs://your_app_api/mono.flac"
   }
 }</li>
 
 <li>If the audio/video content of the file is greater than 1 min use speech:longrunningrecognize endpoint, otherwise use speech:recognize.
-curl -s -X POST -H "Content-Type: application/json" --data-binary @request.json \
-"https://speech.googleapis.com/v1/speech:longrunningrecognize?key=${API_KEY}"
+curl -s -X POST -H "Content-Type: application/json" --data-binary @request.json "https://speech.googleapis.com/v1/speech:longrunningrecognize?key=${API_KEY}"
 </li>
 <li>
 https://speech.googleapis.com/v1/operations/OPERATION_NAME?key=${API_KEY} \
