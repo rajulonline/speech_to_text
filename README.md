@@ -18,7 +18,7 @@ If your file format is .mp4, convert it to .flac format with mono stereo.</li>
 ffmpeg -i location_of_your_file/audio_file.flac -ac 1 mono.flac</li>
 <li>Open the .flac file using quicktime player and get its sample rate </li>
 <li>create request.json file
-{
+<p> {
   "config": {
       "encoding":"FLAC",  
       "sampleRateHertz": 44100,  
@@ -27,7 +27,9 @@ ffmpeg -i location_of_your_file/audio_file.flac -ac 1 mono.flac</li>
   "audio": {
       "uri":"gs://your_app_api/mono.flac"
   }
-}</li>
+}
+</p>
+</li>
 
 <li>If the audio/video content of the file is greater than 1 min use speech:longrunningrecognize endpoint, otherwise use speech:recognize.
 curl -s -X POST -H "Content-Type: application/json" --data-binary @request.json "https://speech.googleapis.com/v1/speech:longrunningrecognize?key=${API_KEY}"
